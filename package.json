@@ -20,5 +20,8 @@
     "bugs": {
         "url": "https://github.com/mdrijwan/typescript-nodejs-tutorial/issues"
     },
-    "homepage": "https://github.com/mdrijwan/typescript-nodejs-tutorial#readme"
+    "homepage": "https://github.com/mdrijwan/typescript-nodejs-tutorial#readme",
+    "dependencies": {
+        "moment": "^2.22.2"
+    }
 }
