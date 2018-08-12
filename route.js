@@ -10,7 +10,7 @@ http.createServer(function(req, res) {
     }
 
     // showing html
-    if (req.url === '/html') {
+    else if (req.url === '/html') {
         var fs = require('fs')
         res.writeHead(200, {
             'Content-Type': 'text/html'
@@ -19,12 +19,15 @@ http.createServer(function(req, res) {
     }
 
     // JSON output
-    if (req.url === '/json') {
+    else if (req.url === '/json') {
         var object = require('./greet/greetings.json')
         res.writeHead(200, {
             'Content-Type': 'text/html'
         })
         res.end(JSON.stringify(object))
+    } else {
+        res.writeHead(404)
+        res.end()
     }
 }).listen(3000, '127.0.0.1');
 
